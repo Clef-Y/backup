@@ -6,8 +6,6 @@ IPT="/sbin/iptables"
 # the interface which connect to the the internet, 
 # it differs if you use wifi or other network device
 ITF=enp0s20f0u1c4i2
-VITF=vboxnet0
-DITF=docker0
 LIP="172.20.10.2"    # local IP, check yours IP to modify this
 
 # shortcut of state, we build stateful-firewall
@@ -20,14 +18,7 @@ RED="-m state --state RELATED,ESTABLISHED"
 DNS="8.8.8.8
 8.8.4.4"
 
-# allow ssh connect to ecs
-AWS="54.249.29.30"
-
 # allow openvpn
-VPNSERVER="185.159.156.12
-185.159.156.11
-185.159.157.13
-185.159.157.16"
 
 # bogus filter, it shouldn't appear in outside network
 # and you can add yours blacklist here
